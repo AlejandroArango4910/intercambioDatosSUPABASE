@@ -1,5 +1,6 @@
+
 // Importación compatible con node-fetch v3+
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+//const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 // Configuración
 const SUPABASE_URL = 'https://xwvexjaunujjhuhddlpb.supabase.co';

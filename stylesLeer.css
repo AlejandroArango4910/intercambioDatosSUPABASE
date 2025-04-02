@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de usuarios */
+#users-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para una visualización más limpia */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta de usuario */
+.user-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título del nombre del usuario */
+.user-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los datos del usuario */
+.user-card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.user-card p strong {
+    font-weight: bold;
+}
+
+/* Asegura que las tarjetas ocupen toda una fila en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #users-container {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más pequeñas */
+    }
+}
+
+/* En pantallas muy pequeñas (móviles), las tarjetas ocupan toda la pantalla */
+@media screen and (max-width: 480px) {
+    #users-container {
+        grid-template-columns: 1fr; /* Una columna en dispositivos muy pequeños */
+    }
+}
